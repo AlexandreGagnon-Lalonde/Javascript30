@@ -25,9 +25,9 @@ p {
 
 .keys {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin-top: 20%;
 }
 
 .key {
@@ -42,4 +42,5 @@ p {
 .playing {
     border: 3px solid yellow;
     box-shadow: 0 0 3px yellow;
+    background: rgba(255,255,255,0.2);
 }
