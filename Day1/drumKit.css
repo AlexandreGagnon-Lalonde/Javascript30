@@ -43,5 +43,5 @@ p {
 .playing {
     border: 3px solid #ffc600;
     box-shadow: 0 0 3px #ffc600;
-    background: rgba(255,255,255,0.2);
+    background: linear-gradient(45deg, rgba(0,95,255,1) 0%, rgba(255,136,0,1) 100%);
 }

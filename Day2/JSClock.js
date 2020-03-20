@@ -6,8 +6,7 @@ const monthNames = ["January", "February", "March", "April", "May", "June", "Jul
 const monthNamesShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // current date printed on the page divs
-document.querySelector(".date").innerHTML = monthNamesShort[date.getMonth()] + " " + date.getDate();
-document.querySelector(".year").innerHTML = date.getFullYear();
+document.querySelector(".date").innerHTML = monthNamesShort[date.getMonth()].toUpperCase() + " " + date.getDate() + " " + date.getFullYear();
 
 // selection of all the clock hands
 const second = document.querySelector(".second");

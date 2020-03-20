@@ -9,15 +9,24 @@ body {
 }
 
 .clock {
-    background-color: teal;
+    background-color: #09A7A1;
     opacity: 0.4;
-    border: 3px solid teal;
-    width: 50vw;
-    height: 50vw;
+    border: 3px solid #09A7A1;
+    width: 40vw;
+    height: 40vw;
     border-radius: 50%;
     position: relative;
-    margin: 0 auto;
+    margin: 8% auto;
+    /* transform-origin: center top;
+    transform: rotate(-30deg);
+    animation: sway 1s infinite alternate ease-in-out; */
 }
+
+/* @keyframes sway {
+    to {
+        transform: rotate(30deg);
+    }
+} */
 
 .time {
     border-radius: 5px;
@@ -28,42 +37,35 @@ body {
     transform-origin: center left;
     transition: all 1s;
     transition-timing-function: linear;
-    background-color: maroon;
+    background-color: #FF790E;
 }
 
 .second {
-    width: 22.5vw;
-    border: 1px solid maroon;
+    width: 17.5vw;
+    border: 1px solid #FF790E;
 }
 
 .minute {
-    width: 20vw;
-    border: 2px solid maroon;
+    width: 15vw;
+    border: 2px solid #FF790E;
 }
 
 .hour {
-    width: 15vw;
-    border: 3px solid maroon;
+    width: 12.5vw;
+    border: 3px solid #FF790E;
 }
 
 .date {
-    text-transform: uppercase;
-    font-family: monospace;
-    float: left;
-}
-
-.monthDay, .year {
-    width: 24%;
     text-align: center;
-    padding-top: 20%;
     font-weight: bolder;
-    font-size: 5em;
-    color: #37392E;
+    font-size: 4vw;
+    color: black;
+    margin-top: 10vw;
 }
 
 .numericClock {
-    margin-top: 12.5vw;
-    font-size: 4em;
+    margin-top: 10vw;
+    font-size: 4vw;
     font-weight: bold;
     color: black;
     text-align: center;
