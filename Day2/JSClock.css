@@ -9,9 +9,9 @@ body {
 }
 
 .clock {
-    background-color: #272727;
+    background-color: teal;
     opacity: 0.4;
-    border: 3px solid #272727;
+    border: 3px solid teal;
     width: 50vw;
     height: 50vw;
     border-radius: 50%;
@@ -28,24 +28,22 @@ body {
     transform-origin: center left;
     transition: all 1s;
     transition-timing-function: linear;
+    background-color: maroon;
 }
 
 .second {
     width: 22.5vw;
-    border: 1px solid #7C6C77;
-    background-color: #7C6C77;
+    border: 1px solid maroon;
 }
 
 .minute {
     width: 20vw;
-    border: 2px solid #635C51;
-    background-color: #635C51;
+    border: 2px solid maroon;
 }
 
 .hour {
     width: 15vw;
-    border: 3px solid #757083;
-    background-color: #757083;
+    border: 3px solid maroon;
 }
 
 .date {
