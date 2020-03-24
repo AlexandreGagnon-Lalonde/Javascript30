@@ -1,0 +1,62 @@
+:root {
+    --base: black;
+    --spacing: 5px;
+    --blur: 0;
+}
+
+body {
+    background-color: #FCD7AD;
+    font-size: 16px;
+    font-family: 'Segoe UI';
+}
+
+h1 {
+    color: #6f5cff;
+    margin-bottom: 10px;
+    margin-top: 0;
+    max-width: 100%;
+    text-align: center;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--base);
+    padding: var(--spacing);
+    filter: blur(var(--blur));
+}
+
+input {
+    display: block;
+}
+
+span {
+    color: var(--base);
+}
+
+.controls label {
+    color: #6f5cff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#hl {
+    font-size: 1.6em;
+}
