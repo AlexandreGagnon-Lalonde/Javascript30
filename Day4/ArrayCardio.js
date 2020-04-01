@@ -1,6 +1,3 @@
-// Get your shorts on - this is an array workout!
-// ## Array Cardio Day 1
-
 // Some data we can work with
 
 const inventors = [
@@ -22,6 +19,16 @@ const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick
 
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
+const fifteenHundred = inventors.filter(function(inventor) {
+    if (inventor.year < 1600 && inventor.year >= 1500) {
+        return true
+    }
+});
+console.log(fifteenHundred);
+
+// Arrow function and ternary operators
+const fifteenHundred2 = inventors.filter(inventor => inventor.year < 1600 && inventor. year >= 1500 ? true : false)
+console.log(fifteenHundred2);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
