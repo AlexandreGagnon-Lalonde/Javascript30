@@ -27,19 +27,30 @@ const fifteenHundred = inventors.filter(function(inventor) {
 console.log(fifteenHundred);
 
 // Arrow function and ternary operators
-const fifteenHundred2 = inventors.filter(inventor => inventor.year < 1600 && inventor. year >= 1500 ? true : false)
+const fifteenHundred2 = inventors.filter(inventor => inventor.year < 1600 && inventor. year >= 1500 ? true : false);
 console.log(fifteenHundred2);
 
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
+const names = inventors.map(function (inventor) {
+    return inventor.first + " " + inventor.last
+});
+console.log(names);
+
+// Arrow solution
+const names2 = inventors.map( inventor => inventor.first + " " + inventor.last);
+console.log(names2);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
 
+
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
 
+
 // 5. Sort the inventors by years lived
+
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
@@ -47,6 +58,7 @@ console.log(fifteenHundred2);
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
