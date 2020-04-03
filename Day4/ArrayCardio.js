@@ -1,5 +1,3 @@
-// Some data we can work with
-
 const inventors = [
     { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
     { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
@@ -17,6 +15,7 @@ const inventors = [
 
 const people = ['Beck, Glenn', 'Becker, Carl', 'Beckett, Samuel', 'Beddoes, Mick', 'Beecher, Henry', 'Beethoven, Ludwig', 'Begin, Menachem', 'Belloc, Hilaire', 'Bellow, Saul', 'Benchley, Robert', 'Benenson, Peter', 'Ben-Gurion, David', 'Benjamin, Walter', 'Benn, Tony', 'Bennington, Chester', 'Benson, Leana', 'Bent, Silas', 'Bentsen, Lloyd', 'Berger, Ric', 'Bergman, Ingmar', 'Berio, Luciano', 'Berle, Milton', 'Berlin, Irving', 'Berne, Eric', 'Bernhard, Sandra', 'Berra, Yogi', 'Berry, Halle', 'Berry, Wendell', 'Bethea, Erin', 'Bevan, Aneurin', 'Bevel, Ken', 'Biden, Joseph', 'Bierce, Ambrose', 'Biko, Steve', 'Billings, Josh', 'Biondo, Frank', 'Birrell, Augustine', 'Black, Elk', 'Blair, Robert', 'Blair, Tony', 'Blake, William'];
 
+
 // Array.prototype.filter()
 // 1. Filter the list of inventors for those who were born in the 1500's
 const fifteenHundred = inventors.filter(function(inventor) {
@@ -25,44 +24,60 @@ const fifteenHundred = inventors.filter(function(inventor) {
     }
 });
 console.log(fifteenHundred);
-
 // Arrow function and ternary operators
 const fifteenHundred2 = inventors.filter(inventor => inventor.year < 1600 && inventor. year >= 1500 ? true : false);
 console.log(fifteenHundred2);
 
+
 // Array.prototype.map()
 // 2. Give us an array of the inventors first and last names
-const names = inventors.map(function (inventor) {
+const names = inventors.map(function(inventor) {
     return inventor.first + " " + inventor.last
 });
 console.log(names);
-
 // Arrow solution
 const names2 = inventors.map( inventor => inventor.first + " " + inventor.last);
 console.log(names2);
 
+
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-const oldToYoung = inventors.sort(function (a, b) {
-    const aa = a.passed - a.year;
-    const bb = b.passed - b.year;
-    if(aa > bb) {
-        return 1;
+const oldToYoung = inventors.sort(function(a, b) {
+    if(a.year > b.year) {
+        return 1
     } else {
-        return -1;
+        return -1
     }
 });
 console.log(oldToYoung);
-
 // Arrow solution
-const oldToYoung2 = inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1);
+const oldToYoung2 = inventors.sort((a, b) => (a.year) > (b.year) ? 1 : -1);
 console.log(oldToYoung2);
+
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
+const sum = inventors.reduce(function(total, inventor) {
+    return total + (inventor.passed - inventor.year)
+}, 0);
+console.log(sum);
+// Arrow solution
+const sum2 = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year), 0);
+console.log(sum2);
 
 
 // 5. Sort the inventors by years lived
+const yearsLived = inventors.sort(function(a, b) {
+    if((a.passed - a.year) > (b.passed - b.year)) {
+        return 1
+    } else {
+        return -1
+    }
+});
+console.log(yearsLived);
+// Arrow solution
+const yearsLived2 = inventors.sort((a, b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : -1);
+console.log(yearsLived2);
 
 
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
