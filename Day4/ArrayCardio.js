@@ -83,12 +83,46 @@ console.log(yearsLived2);
 // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
 // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
 
+// // // const container = document.querySelector(".mw-category");
+// // // const links = Array.from(container.querySelectorAll("a"));
+// // // const de = links.map(boulName => boulName.textContent)
+// // //                 .filter(boulNameDe => boulNameDe.includes("de"));
 
 // 7. sort Exercise
 // Sort the people alphabetically by last name
+// first part is just an array shuffler found on github (https://github.com/Daplie/knuth-shuffle)
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+return array;
+}
+shuffle(people);
 
+const sorted = people.sort(function(firstOne, nextOne) {
+    const [aLast, aFirst] = firstOne.split(", ");
+    const [bLast, bFirst] = nextOne.split(", ");
+    return aLast > bLast ? 1 : -1;
+});
+console.log(sorted);
 
 // 8. Reduce Exercise
 // Sum up the instances of each of these
-const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', "van", "metro", "bike", "bike", "car", "tuk-tuk", "walk" ];
 
+const transport = data.reduce(function(obj, item) {
+    if (!obj[item]) {
+        obj[item] = 0;
+    }
+    obj[item]++;
+    return obj
+}, {});
+console.log(transport)

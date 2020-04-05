@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    width: 30vw;
+    height: 20vh;
+    background: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: white;
+    font-family: "segoe ui";
+}
